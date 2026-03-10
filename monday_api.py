@@ -2,7 +2,7 @@ import requests
 import pandas as pd
 import os
 
-API_KEY = os.getenv("MONDAY_API_KEY")
+API_KEY = os.getenv("eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjYzMTAxMzQ2MywiYWFpIjoxMSwidWlkIjoxMDA4MTI4NzIsImlhZCI6IjIwMjYtMDMtMTBUMDY6MjM6MjYuNjEyWiIsInBlciI6Im1lOndyaXRlIiwiYWN0aWQiOjM0MTUzMzY4LCJyZ24iOiJhcHNlMiJ9.8UkdXSKeYf9vEqPz99XR10clvQAFECn2kNt6uIb32Ao")
 
 
 def fetch_board(board_id):
@@ -51,3 +51,4 @@ def fetch_board(board_id):
     df = pd.DataFrame(rows)
 
     return df
+
