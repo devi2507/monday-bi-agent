@@ -1,10 +1,8 @@
 import requests
 import pandas as pd
-import os
+import streamlit as st
 
-API_KEY = os.getenv("eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjYzMTAxMzQ2MywiYWFpIjoxMSwidWlkIjoxMDA4MTI4NzIsImlhZCI6IjIwMjYtMDMtMTBUMDY6MjM6MjYuNjEyWiIsInBlciI6Im1lOndyaXRlIiwiYWN0aWQiOjM0MTUzMzY4LCJyZ24iOiJhcHNlMiJ9.8UkdXSKeYf9vEqPz99XR10clvQAFECn2kNt6uIb32Ao")
-
-
+API_KEY = st.secrets["eyJhbGciOiJIUzI1NiJ9.eyJ0aWQiOjYzMTAxMzQ2MywiYWFpIjoxMSwidWlkIjoxMDA4MTI4NzIsImlhZCI6IjIwMjYtMDMtMTBUMDY6MjM6MjYuNjEyWiIsInBlciI6Im1lOndyaXRlIiwiYWN0aWQiOjM0MTUzMzY4LCJyZ24iOiJhcHNlMiJ9.8UkdXSKeYf9vEqPz99XR10clvQAFECn2kNt6uIb32Ao"]
 def fetch_board(board_id):
 
     query = f"""
@@ -51,4 +49,5 @@ def fetch_board(board_id):
     df = pd.DataFrame(rows)
 
     return df
+
 
